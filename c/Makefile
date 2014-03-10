@@ -26,8 +26,8 @@ EXECUTABLE = sum
 # MRPT libraries needed by our program (see available libs
 # with "pkg-config –list-all | grep mrpt").
 #
-CFLAGS += $(pkg-config --cflags glib-2.0)
-LDFLAGS += $(pkg-config --libs glib-2.0)
+CFLAGS += $(shell pkg-config --cflags glib-2.0)
+LDFLAGS += $(shell pkg-config --libs glib-2.0)
 
 all: $(SOURCES) $(EXECUTABLE)
 
